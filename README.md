@@ -1,73 +1,84 @@
-# React + TypeScript + Vite
+# 404 Arcade Game
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+404 Arcade Game is a browser-based arcade mini-game where the player collects lost 404 fragments, avoids error blocks, and tries to get the highest score before time runs out.
 
-Currently, two official plugins are available:
+## Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Live Demo: Coming soon
 
-## React Compiler
+## Screenshot
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Screenshot: Coming soon
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- React + TypeScript app built with Vite
+- DOM-based game loop powered by `requestAnimationFrame`
+- WASD and Arrow Key movement
+- Pause and resume support
+- Quit round control
+- 90-second rounds
+- Score, lives, timer, and level tracking
+- Level-based difficulty scaling
+- Level-based time penalties
+- Saved best score, highest level, and games played with `localStorage`
+- Light/dark theme toggle
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## How to Play
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Collect the glowing `404` fragments as they appear around the board. Avoid the moving error blocks, because each hit costs one life and removes time from the round.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Your level increases as your score climbs, which makes the hazards move faster and raises the time penalty for each hit. Stay alive, keep collecting fragments, and try to beat your saved best score before the 90-second timer runs out.
+
+## Controls
+
+| Input | Action |
+| --- | --- |
+| WASD / Arrow Keys | Move |
+| P / Space | Pause or resume |
+| Q | Quit round |
+
+## Tech Stack
+
+- React
+- TypeScript
+- Vite
+- CSS
+
+## Local Setup
+
+Install dependencies:
+
+```bash
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Start the local dev server:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run dev
 ```
+
+Create a production build:
+
+```bash
+npm run build
+```
+
+Run lint checks:
+
+```bash
+npm run lint
+```
+
+## Project Status
+
+MVP complete. Polish and deployment in progress.
+
+## Future Improvements
+
+- Add sound effects
+- Add mobile/touch controls
+- Add more enemy patterns
+- Add screenshot preview for portfolio
+- Deploy live version
