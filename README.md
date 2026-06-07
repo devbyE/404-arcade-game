@@ -4,7 +4,7 @@
 
 ## Live Demo
 
-Live Demo: Coming soon
+Live Demo: https://404-arcade-game.vercel.app
 
 ## Screenshot
 
