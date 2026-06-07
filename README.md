@@ -8,7 +8,7 @@ Live Demo: https://404-arcade-game.vercel.app
 
 ## Screenshot
 
-Screenshot: Coming soon
+![404 Arcade Game gameplay screenshot](./public/preview.png)
 
 ## Features
 
